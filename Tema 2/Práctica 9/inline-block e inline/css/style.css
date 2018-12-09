@@ -1,0 +1,134 @@
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+#header{
+    text-align: center;
+    background-color: aqua;
+}
+#header>h1{
+    padding: 30px;
+    margin: 0;
+    font-size: 48px;
+}
+nav{
+    background-color: cadetblue;
+    text-align: center;
+}
+nav>ul{
+    margin: 0;
+}
+nav>ul li {
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid black;
+    font-size: 28px;
+}
+nav>ul li a {
+    color: black;
+    text-decoration: none;
+    margin: 8px;
+}
+article>header{
+    background-color: transparent;
+    text-align: left;
+    height: 70px;
+}
+article>header>h2{
+    padding-left: 10px;
+}
+article>header>h3{
+    padding-left: 24px;
+}
+section article{
+    background-color: coral;
+    width: 30%;
+    display: inline-block;
+    margin: 8px;
+    text-align: justify;
+    border: 1px solid black;
+}
+article>p{
+    padding: 8px;
+}
+main{
+    text-align: center;
+    width: 70%;
+    display: inline-block;
+}
+#contenedorPrincipal{
+    display: inline-block;
+    width: 100%
+}
+aside{
+    width: 29%;
+    vertical-align: top;
+    display: inline-block;
+    border-left: 1px solid black;
+    
+}
+#archivo{
+    border: 1px solid black;
+    margin: 8px;
+    text-align: justify;
+}
+
+#archivo header h2{
+    text-align: center;
+}
+#archivo div{
+    display: inline-block;
+    margin: 8px;
+}
+#archivo label{
+    font-size: 24px;
+}
+#publicidad{
+    border: 1px solid black;
+    margin: 8px;
+    text-align: center;
+}
+#archivo div{
+   display: inline-block;
+   
+}
+#publicidad header h2{
+    text-align: center;
+}
+#publicidad div{
+   border: 1px solid black;
+   display: inline-block;
+   margin: 64px;
+   margin-right: 32px;
+}
+footer{
+    background-color: gray;
+}
+footer>h2{
+    text-align: center;
+    padding: 12px;
+    font-size: 36px;
+    margin: 0;
+}
+
+footer h3{
+    display: inline;
+    text-align: left;
+    font-size: 26px;
+    margin: 16px;
+    height: 30px;
+}
+#redesSociales{
+    text-align: right;
+    display: inline-block;
+    width: 70%;
+}
+#redesSociales div{
+    display: inline-block;
+    text-align: center;
+    margin: 16px;
+    
+}
+img{
+    height: 32px;
+    width: 32px;
+}

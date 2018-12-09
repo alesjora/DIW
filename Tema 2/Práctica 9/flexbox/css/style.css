@@ -1,0 +1,154 @@
+@font-face{
+    font-family: myFirstFont;
+    src: url(../f);
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+#header{
+    text-align: center;
+    background-color: aqua;
+}
+header>h1{
+    padding: 16px;
+    margin: 0;
+    font-size: 48px;
+}
+nav{
+    background-color: cadetblue;
+    text-align: center;
+}
+nav>ul{
+    margin: 0;
+    list-style-type: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav>ul li {
+    margin: 8px;
+    border: 1px solid black;
+    font-size: 28px;
+}
+nav>ul li a {
+    color: black;
+    text-decoration: none;
+    margin: 8px;
+}
+article>header{
+    background-color: transparent;
+    text-align: left;
+    height: 70px;
+}
+article>header>h2{
+    padding-left: 10px;
+}
+article>header>h3{
+    padding-left: 24px;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+section article{
+    background-color: coral;
+    width: 30%;
+    margin: 8px;
+    text-align: justify;
+    border: 1px solid black;
+}
+article>p{
+    padding: 8px;
+}
+main{
+    text-align: center;
+    width: 70%;
+    display: inline-flex;
+}
+#contenedorPrincipal{
+    display: flex;
+    width: 100%
+}
+aside{
+    width: 29%;
+    vertical-align: top;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-left: 1px solid black;
+    
+}
+#archivo{
+    border: 1px solid black;
+    margin: 8px;
+    text-align: justify;
+    width: 100%
+}
+
+#archivo header h2{
+    text-align: center;
+}
+#archivo div{
+    display: inline-block;
+    margin-left: 8px;
+}
+#archivo label{
+    font-size: 24px;
+}
+#publicidad{
+    border: 1px solid black;
+    margin: 8px;
+    text-align: center;
+    width: 100%
+}
+
+#publicidad header h2{
+    text-align: center;
+}
+
+#elementosPublicidad div{
+   border: 1px solid black;
+   width: 40%;
+   height: 100px;
+   text-align: center;
+   display: inline-flex;
+   margin: 8px;
+}
+#elementosPublicidad div p{
+    margin: 8px auto;
+}
+footer{
+    background-color: gray;
+}
+footer>h2{
+    text-align: center;
+    padding: 12px;
+    font-size: 36px;
+    margin: 0;
+}
+
+footer > div{
+    display: flex;
+    justify-content:space-between;
+}
+
+footer h3{
+    font-size: 26px;
+    margin-top: 40px;
+    margin-left:8px;
+}
+#redesSociales{
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-align: right;
+}
+#redesSociales div{
+    text-align: center;
+    margin: 16px;
+    
+}
+img{
+    height: 32px;
+    width: 32px;
+}

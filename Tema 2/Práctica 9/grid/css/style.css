@@ -1,0 +1,183 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        "header header header header"
+        "nav nav nav nav"
+        "main main main aside"
+        "footer footer footer footer";
+}
+
+#header {
+    text-align: center;
+    background-color: aqua;
+    grid-area: header;
+}
+
+header>h1 {
+    padding: 16px;
+    margin: 0;
+    font-size: 48px;
+}
+
+nav {
+    background-color: cadetblue;
+    text-align: center;
+    grid-area: nav;
+}
+
+nav>ul {
+    margin: 0;
+    list-style-type: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav>ul li {
+    margin: 8px;
+    border: 1px solid black;
+    font-size: 28px;
+}
+
+nav>ul li a {
+    color: black;
+    text-decoration: none;
+    margin: 8px;
+}
+
+article>header {
+    background-color: transparent;
+    text-align: left;
+    height: 70px;
+}
+
+article>header>h2 {
+    padding-left: 10px;
+}
+
+article>header>h3 {
+    padding-left: 24px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    margin: 8px;
+
+}
+
+section article {
+    background-color: coral;
+    text-align: justify;
+    border: 1px solid black;
+}
+
+article>p {
+    padding: 8px;
+}
+
+main {
+    text-align: center;
+    grid-area: main;
+}
+
+#contenedorPrincipal {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+}
+
+aside {
+    vertical-align: top;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-left: 1px solid black;
+    grid-area: aside;
+}
+
+#archivo {
+    border: 1px solid black;
+    margin: 8px;
+    text-align: justify;
+    width: 100%
+}
+
+#archivo header h2 {
+    text-align: center;
+}
+
+#archivo>div div {
+    display: inline-block;
+    
+}
+
+#archivo label {
+    font-size: 24px;
+}
+
+#publicidad {
+    border: 1px solid black;
+    margin: 8px;
+    text-align: center;
+    width: 100%
+}
+
+#publicidad header h2 {
+    text-align: center;
+}
+
+#elementosPublicidad{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+}
+#elementosPublicidad div{
+    border: 1px solid black;
+    margin: 8px;
+    min-height: 70px;
+}
+footer {
+    background-color: gray;
+    grid-area: footer;
+}
+
+footer>h2 {
+    text-align: center;
+    padding: 12px;
+    font-size: 36px;
+    margin: 0;
+}
+
+footer>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h3 {
+    font-size: 26px;
+    margin-top: 40px;
+    margin-left: 8px;
+}
+
+#redesSociales {
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-align: right;
+}
+
+#redesSociales div {
+    text-align: center;
+    margin: 16px;
+
+}
+
+img {
+    height: 32px;
+    width: 32px;
+}

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>José Rafael Álvarez Espino</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <h1>TUTORIAL CSS3 - 2018/2019</h1>
+    <h2><img src="icon/language-css3.svg"></h2>
+    <nav>
+        <ul>
+            <li><a href="Bordes.html">Bordes</a></li>
+            <li><a href="Fondos.html">Fondos</a></li>
+            <li><a href="Efectos_texto.html">Fuentes y Ef Texto</a></li>
+            <li><a href="Transformaciones.html">Transformac.</a></li>
+            <li><a href="Transiciones.html">Transiciones</a></li>
+            <li><a href="Animaciones.html">Animaciones</a></li>
+            <li><a href="Col_svg_filter.html">Col Mult, Filter y SVG</a></li>
+            <li><a href="Color.html">Color y Degradado</a></li>
+            <li><a href="Pseudos_Css3.html">Pseudos CSS3</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <h2>TUTORIAL CSS3</h2>
+        <h3>Resultado de la combinación de todos los ejercicios de la práctica 7 de los alumnos de 2ºDAW 2018-2019</h3>
+
+        <section>
+            <article>
+                <h3>:link</h3>
+                <p>Representa un elemento que aún no se ha visitado. Coincide con cada elemento no visitado
+                    &#60;a&#62;, &#60;area&#62;, o &#60;link&#62; que tiene un atributo href.<br /><br />
+                    Sintaxis: :link
+                </p>
+                <div id="codigoEjemplo">
+                    #ejemploLink{
+                    <br>
+                    background-color: green;
+                    }
+                    <br>
+                    #ejemploLink:link {
+                    <br>
+                    background-color: yellow;
+                    }
+                </div>
+                <div><a href="#" id="ejemploLink" target="_blank">Visita la página y cambiará el color de fondo.</a></div>
+            </article>
+
+            <article>
+                <h3>:visited</h3>
+                <p>Representa enlaces que el usuario ya ha visitado. Para darle un estilo apropiado a los enlaces,
+                    coloque la regla :visited después de la regla :link pero antes de las reglas :hover y :active,
+                    según lo definido por el orden LVHA: :link — :visited — :hover — :active.<br><br>
+                    Sintaxis: :visited</p>
+                <div id="codigoEjemplo">
+                    #ejemploVisited {
+                    <br>
+                    background-color: green;
+                    }
+                    <br>
+                    #ejemploVisited:visited {
+                    <br>
+                    background-color: yellow;
+                    }
+                </div>
+                <div><a href="#" id="ejemploVisited" target="_blank">Visita la página y cambiará el color de fondo.</a></div>
+            </article>
+
+            <article>
+                <h3>:hover</h3>
+                <p>Coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no
+                    necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento
+                    con el cursor (puntero del mouse).<br><br>
+                    Sintaxis: :hover</p>
+                <div id="codigoEjemplo">
+                    #ejemploHover:hover {<br>
+                    background-color: blueviolet;
+                    }
+                </div>
+                <div><a href="#" id="ejemploHover" target="_blank">Pasa el ratón por encima para cambiar el color.</a></div>
+            </article>
+
+            <article>
+                <h3>:active</h3>
+                <p>Representa un elemento (como un botón) que el usuario está activando. Cuando se usa un mouse, la
+                    "activación" generalmente comienza cuando el usuario presiona el botón primario del mouse y termina
+                    cuando se suelta.<br><br>
+                    Sintaxis: :active</p>
+                    <div id="codigoEjemplo">
+                            #ejemploActive:active {<br>
+                                background-color: gray;<br>
+                                color: white;
+                            }
+                        </div>
+                <div><a href="#" id="ejemploActive" target="_blank">Mientras tengas pulsado el enlace el color de fondo
+                        será gris y la letra blanca.</a></div>
+            </article>
+
+            <article>
+                <h3>:focus</h3>
+                <p>Representa un elemento (como una entrada de formulario) que ha recibido el foco. Generalmente se
+                    activa cuando el usuario hace clic, toca un elemento o lo selecciona con la tecla "Tab" del
+                    teclado.<br><br>
+                    Sintaxis: :focus</p>
+                    <div id="codigoEjemplo">
+                            #ejemploFocus:focus {<br>
+                                background-color: blue;<br>
+                            }
+                            }
+                        </div>
+                <div><input type="text" id="ejemploFocus" value="Mientras tenga el foco seré de color azul"></div>
+            </article>
+
+            <article>
+                <h3>:target</h3>
+                <p>Representa un elemento único (el elemento objetivo) con un id que coincide con el fragmento de la
+                    URL.<br><br>
+                    Sintaxis: :target</p>
+                <div>
+                    <div id="pruebaTarget">
+                        <ol>
+                            <li><a href="#p1">¡Ir al primer párrafo!</a></li>
+                            <li><a href="#p2">¡Ir al segundo párrafo!</a></li>
+                            <li><a href="#ninguno">Este enlace no va a ninguna parte</a></li>
+                        </ol>
+
+                        <p id="p1">Este es el primer párrafo</p>
+                        <p id="p2">Este es el segundo párrafo</p>
+                    </div>
+
+                </div>
+            </article>
+
+            <article>
+                <h3>:lang()</h3>
+                <p>Es utilizada para modificar elementos en función del idioma en el que se determina que están.<br><br>
+                    Sintaxis: :lang(language-code)</p>
+                <div>
+                    <div id="pruebaLang">
+                        <p lang="es">Esta cita en español tiene una cita <q>anidada</q> adentro.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>:enabled</h3>
+                <p>Representa cualquier elemento habilitado. Un elemento está habilitado si puede ser activado o si
+                    acepta el foco.<br><br>
+                    Sintaxis: :enabled
+                </p>
+                <div>
+                    <p>Los elementos habilitados se mostrarán en verde</p>
+                    <form id="pruebaEnabled">
+                        <input type="text" id="nombre" value="Nombre"><br>
+                        <input type="text" id="apellido" value="Apellido" disabled="disabled"><br>
+                        <input type="button" value="Enviar">
+                    </form>
+                </div>
+            </article>
+
+            <article>
+                <h3>:disabled</h3>
+                <p>Representa a cualquier elemento deshabilitado. Un elemento se encuentra deshabilitado si no puede
+                    ser activado ni aceptar el foco.<br><br>
+                    Sintaxis: :disabled
+                </p>
+                <div>
+                    <p>Los elementos deshabilitado se mostrarán en rojo</p>
+                    <form id="pruebaDisabled">
+                        <input type="text" id="nombre" value="Nombre"><br>
+                        <input type="text" id="apellido" value="Apellido" disabled="disabled"><br>
+                        <input type="button" value="Enviar" disabled="disabled">
+                    </form>
+                </div>
+            </article>
+
+            <article>
+                <h3>:checked</h3>
+                <p>Representa cualquier radio, checkbox u option que está marcado o conmutado a un estado on.<br><br>
+                    Sintaxis: :checked
+                </p>
+                <div>
+                    <div id="pruebaChecked">
+                        <p>Los elementos que estén marcados tendrán una sombra azul</p>
+                        <input type="radio" name="my-input" id="Si">
+                        <label for="Si">Si</label>
+                        <input type="radio" name="my-input" id="No">
+                        <label for="No">No</label>
+
+                        <input type="checkbox" name="checkbox" id="check">
+                        <label for="check">Púlsame</label>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>:indeterminate</h3>
+                <p>Representa cualquier elemento de formulario cuyo estado sea indeterminado. Es decir, un elemento que
+                    no está "inicializado" y no tiene ningún valor<br><br>
+                    Sintaxis: :indeterminate
+                </p>
+                <div>
+                    <div id="pruebaIndeterminate">
+                        <p>Los elementos indeterminados tendrán un fondo amarillo. Al pulsar en alguno el fondo se
+                            quitará ya que el elemento obtendrá un valor</p>
+                        <input type="radio" name="radio">
+                        <label for="radio">Seleccioname para tener un valor.</label>
+                        <input type="radio" name="radio">
+                        <label for="radio">Seleccioname para tener un valor.</label>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>:root</h3>
+                <p>Selecciona el elemento raíz de un árbol que representa el documento. En HTML, :root representa el
+                    elemento html y es idéntico al selector html, excepto que su especificidad es mayor.<br><br>
+                    Sintaxis: :root
+                </p>
+                <div>
+                    <p>El código siguiente obtendría el elemento html cambiaría su fondo a azul</p>
+                    <p>:root {
+                        background: blue;
+                        }</p>
+                </div>
+            </article>
+
+            <article>
+                <h3>:nth-child()</h3>
+                <p>Coincide con uno o más elementos en función de su posición entre un grupo de hermanos. Se especifica
+                    con un único argumento, que representa el patrón para los elementos coincidentes.
+                    Algunos valores son odd que representa elementos cuya posición numérica en una serie de hermanos es
+                    impar: 1, 3, 5, etc. Y even que representa elementos cuya posición numérica en una serie de
+                    hermanos es par: 2, 4, 6, etc.<br><br>
+                    Sintaxis: :nth-child(an-plus-b | even | odd)
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo usaremos nth-child(odd) que coloreará los elementos impares de color
+                        azul</p>
+                    <div id="pruebaOdd">
+                        <span>Elemento 1</span>
+                        <span>Elemento 2</span>
+                        <span>Elemento 3</span>
+                        <span>Elemento 4</span>
+                        <span>Elemento 5</span>
+                        <span>Elemento 6</span>
+                        <span>Elemento 7</span>
+                    </div>
+                    <p>En el siguiente ejemplo usaremos nth-child(even) que coloreará los elementos pares de color azul</p>
+                    <div id="pruebaEven">
+                        <span>Elemento 1</span>
+                        <span>Elemento 2</span>
+                        <span>Elemento 3</span>
+                        <span>Elemento 4</span>
+                        <span>Elemento 5</span>
+                        <span>Elemento 6</span>
+                        <span>Elemento 7</span>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>:nth-last-child()</h3>
+                <p>Selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde
+                    el final. Esta pseudo-clase es esencialmente la misma que :nth-child, excepto que cuenta los
+                    elementos hacia atrás desde el final, no hacia adelante desde el principio.
+                    Algunos valores son odd que representa elementos cuya posición numérica en una serie de hermanos es
+                    impar: 1, 3, 5, etc. Y even que representa elementos cuya posición numérica en una serie de
+                    hermanos es par: 2, 4, 6, etc.<br><br>
+                    Sintaxis: :nth-last-child(an-plus-b | even | odd)
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo usaremos nth-child(3n) que coloreará los elementos 3,6,9... contando
+                        desde el final de color azul
+                        azul</p>
+                    <div id="prueba3n">
+                        <span>Elemento 1</span>
+                        <span>Elemento 2</span>
+                        <span>Elemento 3</span>
+                        <span>Elemento 4</span>
+                        <span>Elemento 5</span>
+                        <span>Elemento 6</span>
+                        <span>Elemento 7</span>
+                        <span>Elemento 8</span>
+                        <span>Elemento 9</span>
+                    </div>
+                    <p>En el siguiente ejemplo usaremos nth-child(4) que coloreará el cuarto elemento contando desde el
+                        final de color azul</p>
+                    <div id="pruebanthlastchild4">
+                        <span>Elemento 1</span>
+                        <span>Elemento 2</span>
+                        <span>Elemento 3</span>
+                        <span>Elemento 4</span>
+                        <span>Elemento 5</span>
+                        <span>Elemento 6</span>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3>:nth-of-type()</h3>
+                <p>Selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de
+                    hermanos. Se especifica con un solo argumento, que representa el patrón para los elementos
+                    coincidentes. Sus valores son los mismos que nth-of-type<br><br>
+                    Sintaxis: :nth-of-child(an-plus-b | even | odd)
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo usaremos p:nth-of-type(1) para poner en negrita el primer párrafo,
+                        p:nth-of-type(even) para coloreaer en azul los párrafos pares y p:nth-of-type(odd) para
+                        colorear de rojo los párrafo impares.
+                        Solo tendrá en cuenta los párrafos, por lo que los divs que hay no contará para nth-of-type</p>
+                    <div id="pruebanthoftype">
+                        <div>Esto es un div</div>
+                        <p>1er párrafo y está en negrita</p>
+                        <p>2do párrafo.</p>
+                        <div>Esto es otro div</div>
+                        <p>3er párrafo.</p>
+                        <p>4to párrafo.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>:nth-last-of-type()</h3>
+                <p>Coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de
+                    hermanos, contando desde el final. Se especifica con un solo argumento, que representa el patrón
+                    para los elementos
+                    coincidentes. Sus valores son los mismos que nth-last-child<br><br>
+                    Sintaxis: :nth-last-of-child(an-plus-b | even | odd)
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo usaremos p:nth-last-of-type(3) para colorear el tercer span, contando
+                        desde el final, de color rojo
+                        Solo tendrá en cuenta los span, por lo que el elemento em que hay no contará para
+                        nth-last-of-type</p>
+                    <div id="pruebanthlastoftype">
+                        <span>Este es un span.</span>
+                        <span>Este es otro span elegido ya que es el 3º span.</span>
+                        <em>Esto esta enfatizado.</em>
+                        <span>Esto es otro span.</span>
+                        <em>Esto esta enfatizado.</em>
+                        <span>Este es el último span.</span>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>:first-child</h3>
+                <p>Representa el primer elemento entre un grupo de elementos hermanos.<br><br>
+                    Sintaxis: :first-child
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo cambiaremos a color rojo el primer elemento de las dos listas mientras
+                        que los demás tendrán color azul</p>
+                    <div id="pruebaFirstChild">
+                        <ul>
+                            <li>Objeto 1</li>
+                            <li>Objeto 2</li>
+                            <li>Objeto 3
+                                <ul>
+                                    <li>Objeto 3.1</li>
+                                    <li>Objeto 3.2</li>
+                                    <li>Objeto 3.3</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </article>
+
+            <article>
+                <h3>:last-child</h3>
+                <p>Representa el último elemento entre un grupo de elementos hermanos.<br><br>
+                    Sintaxis: :last-child
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo cambiaremos a color rojo el primer elemento de las dos listas empezando
+                        por el final mientras que los demás tendrán color azul.
+                        Además, los últimos elementos tendrán un borde de color verde</p>
+                    <div id="pruebaLastChild">
+                        <ul>
+                            <li>Objeto 1</li>
+                            <li>Objeto 2</li>
+                            <li>Objeto 3
+                                <ul>
+                                    <li>Objeto 3.1</li>
+                                    <li>Objeto 3.2</li>
+                                    <li>Objeto 3.3</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </article>
+
+            <article>
+                <h3>:first-of-type</h3>
+                <p>Representa el primer elemento de su tipo entre un grupo de elementos hermanos.
+                    <br><br>
+                    Sintaxis: :first-of-type
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo pondrá de color azul el primer párrafo que encuentre entre sus hermanos</p>
+                    <div id="pruebaFistOfType">
+                        <h4>Encabezado H4</h2>
+                            <p>Párrafo 1</p>
+                            <p>Párrafo 2</p>
+                    </div>
+
+                </div>
+            </article>
+
+            <article>
+                <h3>:last-of-type</h3>
+                <p>Representa el último elemento de su tipo entre un grupo de elementos hermanos.
+                    <br><br>
+                    Sintaxis: :last-of-type
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo pondrá de color rojo el último párrafo que encuentre entre sus hermanos</p>
+                    <div id="pruebaLastOfType">
+                        <p>Párrafo 1</p>
+                        <h4>Encabezado H4</h2>
+                            <p>Párrafo 2</p>
+                    </div>
+
+                </div>
+            </article>
+
+            <article>
+                <h3>:only-child</h3>
+                <p>Representa un elemento sin hermanos. Esto es lo mismo que :first-child:last-child o
+                    :nth-child(1):nth-last-child(1), pero con una especificidad menor.
+                    <br><br>
+                    Sintaxis: :only-child. Hay que destacar que entre la etiqueta y el only-child debe de haber un
+                    espacio, es decir, div :only-child ya que div:only-child busca el div que sea hijo único mientras
+                    que div :only-child busca el hijo único dentro del div.
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo pondrá de color rojo los hijos únicos</p>
+                    <div id="pruebaOnlyChild">
+                        <div>
+                            <p>Soy un hijo único por lo que estoy en rojo</p>
+                        </div>
+
+                        <div>
+                            <p>Yo tengo hermanos.</p>
+                            <h4>Yo tambien tengo hermanos</h4>
+                            <span>Yo también tengo hermanos. <span>Yo soy hijo único.</span></span>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+            <article>
+                <h3>:only-of-type</h3>
+                <p>Representa un elemento que no tiene hermanos del mismo tipo.
+                    <br><br>
+                    Sintaxis: :only-of-type. Hay que destacar que entre la etiqueta y el only-of-type debe de haber un
+                    espacio, es decir, div :only-child ya que div:only-of-type busca el div que sea hijo único mientras
+                    que div :only-of-type busca el hijo único dentro del div.
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo pondrá de color rojo a los elementos que no tengan hermanos del mismo
+                        tipo</p>
+                    <div id="pruebaOnlyOfType">
+                        <div>
+                            <p>Mi hermano es el tercero.</p>
+                            <h4>Yo no tengo hermanos del mismo tipo</h4>
+                            <span>Mi hermano es el penúltimo.</span>
+                            <p>Mi hermano es el primero.</p>
+                            <span>Mi hermano es el tercero.</span><br>
+                            <i>Yo no tengo hermanos</i>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+            <article>
+                <h3>:empty</h3>
+                <p>Representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto
+                    (incluido el espacio en blanco).
+                    <br><br>
+                    Sintaxis: :empty.
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo pondrá de color rojo los divs que no tenga hijos, y de azul a los que si
+                        tenga. El último div tiene un espacio en blanco.
+                    </p>
+                    <div id="pruebaEmpty">
+                        <div></div>
+                        <div>El último div tiene un espacio</div>
+                        <div> </div>
+                    </div>
+
+                </div>
+            </article>
+
+            <article>
+                <h3>:not()</h3>
+                <p>Representa elementos que no coinciden con una lista de selectores. Como evita que se seleccionen
+                    elementos específicos, se lo conoce como la pseudo-clase de negación.
+                    <br><br>
+                    Sintaxis: :not(argumentos). Argumentos es una lista separada por comas de uno o más selectores.
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo pondrá de color rojo los elementos que no sean un div, de color azul los
+                        elementos que no sean p, subrayado los elementos que no tengan la clase .classNot, y un borde
+                        verde a los elementos que no sean h1
+                    </p>
+                    <div id="pruebaNot">
+                        <p>Soy un párrafo.</p>
+                        <div>Soy un div.</div>
+                        <p class="classNot">Soy un párrafo y tengo la clase pruebaNot</p>
+
+                    </div>
+
+                </div>
+            </article>
+
+            <article>
+                <h3>::first-line</h3>
+                <p>Aplica estilos a la primera línea de un elemento de nivel de bloque. Hay que tener en cuenta que la
+                    longitud de la primera línea depende de muchos factores, incluido el ancho del elemento, el ancho
+                    del documento y el tamaño de la fuente del texto.
+                    <br><br>
+                    Sintaxis: ::first-line
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo veremos como la primera linea del párrafo se pone de color roja y en
+                        mayúsculas</p>
+                    <div id="pruebaFirstLine">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aut similique alias minima
+                            tempore aperiam tenetur, qui cupiditate et.Voluptatibus, ad omnis. Assumenda ex aut
+                            excepturi nulla ipsum suscipit consectetur ratione nostrum iure quam rerum et, ducimus
+                            perferendis minima magni nihil, sequi ipsa aliquid illum libero. Eos, error et!</p>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>::first-letter</h3>
+                <p>Aplica estilos a la primera letra de la primera línea de un elemento de nivel de bloque, pero solo
+                    cuando no está precedido por otro contenido (como imágenes o tablas).
+                    <br><br>
+                    Sintaxis: ::first-letter
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo veremos como la primera letra de cada párrafo se pone de color roja y su
+                        tamaño es más grande que las demás</p>
+                    <div id="pruebaFirstLetter">
+                        <p>Soy el párrafo nº 1</p>
+                        <p>Soy el párrafo nº 2</p>
+                        <p>Soy el párrafo nº 3</p>
+                        <p>Soy el párrafo nº 4</p>
+                        <p>Soy el último párrafo</p>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>::before</h3>
+                <p>Crea un pseudo-elemento que es el primer hijo del elemento seleccionado. Es usado normalmente para
+                    añadir contenido estético a un elemento, usando la propiedad content. Este elemento se muestra en
+                    línea con el texto de forma predeterminada.
+                    <br><br>
+                    Sintaxis: ::before
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo añadiremos el símbolo ♫ al principio de cada párrafo </p>
+                    <div id="pruebaBefore">
+                        <p>Soy el párrafo nº 1</p>
+                        <p>Soy el párrafo nº 2</p>
+                        <p>Soy el párrafo nº 3</p>
+                        <p>Soy el párrafo nº 4</p>
+                        <p>Soy el último párrafo</p>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <h3>::after</h3>
+                <p>Coincide con el último hijo virtual del elemento seleccionado. Se usa generalmente para añadir
+                    contenido estético a un elemento, usando la propiedad CSS content. Este elemento se muestra en
+                    línea con el texto de forma predeterminada.
+                    <br><br>
+                    Sintaxis: ::after
+                </p>
+                <div>
+                    <p>En el siguiente ejemplo añadiremos el símbolo ♫ al final de cada párrafo</p>
+                    <div id="pruebaAfter">
+                        <p>Soy el párrafo nº 1</p>
+                        <p>Soy el párrafo nº 2</p>
+                        <p>Soy el párrafo nº 3</p>
+                        <p>Soy el párrafo nº 4</p>
+                        <p>Soy el último párrafo</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+    <footer>
+        <div>Jaime Rabasco Ronda</div>
+        <a href="https://twitter.com/jaimerr" class="social"><img src="icon/twitter.svg" alt="Twitter"></a>
+        <a href="https://github.com/jaimerabasco" class="social"><img src="icon/github.svg" alt="GitHub"></a>
+    </footer>
+</body>
+
+</html>
